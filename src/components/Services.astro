@@ -154,8 +154,8 @@
 
 <style>
 	.services {
-		padding: 6rem 0;
-		background: white;
+		padding: 4rem 0;
+		background: #f8f9fa;
 	}
 
 	.services-container {
@@ -166,38 +166,41 @@
 
 	.services-header {
 		text-align: center;
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
 	.services-header h2 {
-		font-size: 2.5rem;
-		color: #2c3e50;
-		margin-bottom: 1rem;
+		font-size: 2rem;
+		color: #1a1a1a;
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
 	}
 
 	.services-header p {
-		font-size: 1.2rem;
+		font-size: 1rem;
 		color: #666;
 	}
 
 	.play-areas {
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 	}
 
 	.play-area {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
+		gap: 2rem;
 		align-items: center;
-		margin-bottom: 4rem;
-		padding: 2rem;
-		border-radius: 20px;
-		background: #f8f9fa;
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		border-radius: 16px;
+		background: white;
+		border: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	.main-area {
-		background: linear-gradient(135deg, #e8f4f8 0%, #d4edda 100%);
-		border: 2px solid #4a90e2;
+		background: rgba(0, 122, 255, 0.03);
+		border: 1px solid rgba(0, 122, 255, 0.1);
 	}
 
 	.play-area:nth-child(even) {
@@ -216,43 +219,47 @@
 
 	.image-placeholder {
 		width: 100%;
-		height: 250px;
-		background: #e9ecef;
-		border-radius: 15px;
+		height: 200px;
+		background: #f8f9fa;
+		border-radius: 12px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border: 2px dashed #ced4da;
+		border: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	.placeholder-content {
 		text-align: center;
-		padding: 1.5rem;
-		color: #6c757d;
+		padding: 1rem;
+		color: #666;
 	}
 
 	.placeholder-content h4 {
-		color: #4a90e2;
-		margin-bottom: 1rem;
+		color: #007AFF;
+		margin-bottom: 0.5rem;
+		font-size: 14px;
+		font-weight: 600;
 	}
 
 	.area-info h3 {
-		color: #2c3e50;
+		color: #1a1a1a;
 		margin-bottom: 0.5rem;
-		font-size: 1.5rem;
+		font-size: 1.125rem;
+		font-weight: 600;
 	}
 
 	.age-range {
-		color: #4a90e2;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
+		color: #007AFF;
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+		font-size: 14px;
 	}
 
 	.area-info p {
 		color: #666;
-		line-height: 1.6;
-		margin-bottom: 1.5rem;
+		line-height: 1.5;
+		margin-bottom: 1rem;
+		font-size: 15px;
 	}
 
 	.features {
@@ -277,66 +284,69 @@
 
 	.additional-services {
 		text-align: center;
-		margin-top: 4rem;
+		margin-top: 3rem;
 	}
 
 	.additional-services h2 {
-		color: #2c3e50;
-		margin-bottom: 3rem;
-		font-size: 2rem;
+		color: #1a1a1a;
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+		font-weight: 600;
 	}
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
 	}
 
 	.service-card {
 		background: white;
-		padding: 2rem;
-		border-radius: 15px;
+		padding: 1.5rem;
+		border-radius: 12px;
 		text-align: center;
-		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-		transition: transform 0.3s ease;
-		border: 1px solid #e9ecef;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		transition: transform 0.2s ease;
 	}
 
 	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 	}
 
 	.service-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.service-card h4 {
-		color: #2c3e50;
-		margin-bottom: 1rem;
-		font-size: 1.2rem;
+		color: #1a1a1a;
+		margin-bottom: 0.75rem;
+		font-size: 1rem;
+		font-weight: 600;
 	}
 
 	.service-card p {
 		color: #666;
-		line-height: 1.6;
-		margin-bottom: 1.5rem;
+		line-height: 1.5;
+		margin-bottom: 1rem;
+		font-size: 14px;
 	}
 
 	.service-link {
-		color: #4a90e2;
+		color: #007AFF;
 		text-decoration: none;
-		font-weight: bold;
+		font-weight: 600;
 		padding: 0.5rem 1rem;
-		border: 2px solid #4a90e2;
-		border-radius: 25px;
-		transition: all 0.3s ease;
+		border: 1px solid rgba(0, 122, 255, 0.3);
+		border-radius: 8px;
+		transition: all 0.2s ease;
+		font-size: 13px;
 	}
 
 	.service-link:hover {
-		background: #4a90e2;
-		color: white;
+		background: rgba(0, 122, 255, 0.05);
+		border-color: #007AFF;
 	}
 
 	/* Responsive Design */

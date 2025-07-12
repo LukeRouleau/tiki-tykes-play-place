@@ -8,9 +8,417 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Tiki Tykes Island Play - Where Island Adventures Begin!</title>
+		<meta name="description" content="A magical play destination for young children on Amelia Island. Safe, engaging, beach-themed play experiences that spark imagination and build community connections.">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				font-family: 'Fredoka', 'Comic Neue', sans-serif;
+				background: linear-gradient(135deg, #87CEEB 0%, #E0F6FF 50%, #FFE4B5 100%);
+				min-height: 100vh;
+				color: #2C3E50;
+			}
+			
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+			
+			header {
+				background: rgba(255, 255, 255, 0.95);
+				backdrop-filter: blur(10px);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+			
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px 0;
+			}
+			
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			
+			.logo h1 {
+				font-family: 'Fredoka', sans-serif;
+				font-size: 2.5rem;
+				font-weight: 700;
+				background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			
+			.logo span {
+				font-size: 3rem;
+			}
+			
+			.nav-links {
+				display: flex;
+				list-style: none;
+				gap: 30px;
+			}
+			
+			.nav-links a {
+				text-decoration: none;
+				color: #2C3E50;
+				font-weight: 500;
+				font-size: 1.1rem;
+				transition: color 0.3s ease;
+			}
+			
+			.nav-links a:hover {
+				color: #4ECDC4;
+			}
+			
+			.hero {
+				text-align: center;
+				padding: 80px 0;
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320"><path fill="%23ffffff" fill-opacity="0.3" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,165.3C672,171,768,149,864,144C960,139,1056,149,1152,165.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+				background-size: cover;
+			}
+			
+			.hero h2 {
+				font-family: 'Fredoka', sans-serif;
+				font-size: 3.5rem;
+				font-weight: 600;
+				color: #2C3E50;
+				margin-bottom: 20px;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+			}
+			
+			.hero p {
+				font-size: 1.4rem;
+				color: #34495E;
+				margin-bottom: 40px;
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+				line-height: 1.6;
+			}
+			
+			.cta-button {
+				display: inline-block;
+				background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+				color: white;
+				padding: 18px 40px;
+				border-radius: 50px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 1.2rem;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+			}
+			
+			.cta-button:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+			}
+			
+			.features {
+				padding: 80px 0;
+				background: rgba(255, 255, 255, 0.9);
+			}
+			
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 40px;
+				margin-top: 60px;
+			}
+			
+			.feature-card {
+				background: white;
+				padding: 40px 30px;
+				border-radius: 20px;
+				text-align: center;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease;
+			}
+			
+			.feature-card:hover {
+				transform: translateY(-10px);
+			}
+			
+			.feature-icon {
+				font-size: 4rem;
+				margin-bottom: 20px;
+			}
+			
+			.feature-card h3 {
+				font-family: 'Fredoka', sans-serif;
+				font-size: 1.8rem;
+				color: #2C3E50;
+				margin-bottom: 15px;
+				font-weight: 600;
+			}
+			
+			.feature-card p {
+				color: #576574;
+				line-height: 1.6;
+				font-size: 1.1rem;
+			}
+			
+			.section-title {
+				text-align: center;
+				font-family: 'Fredoka', sans-serif;
+				font-size: 3rem;
+				color: #2C3E50;
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+			
+			.section-subtitle {
+				text-align: center;
+				font-size: 1.3rem;
+				color: #576574;
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 1.6;
+			}
+			
+			.community {
+				padding: 80px 0;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+			}
+			
+			.community .section-title,
+			.community .section-subtitle {
+				color: white;
+			}
+			
+			.community-content {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 40px;
+				margin-top: 60px;
+			}
+			
+			.community-item {
+				text-align: center;
+				padding: 30px 20px;
+			}
+			
+			.community-item h4 {
+				font-family: 'Fredoka', sans-serif;
+				font-size: 1.6rem;
+				margin-bottom: 15px;
+				font-weight: 600;
+			}
+			
+			.community-item p {
+				font-size: 1.1rem;
+				line-height: 1.6;
+				opacity: 0.9;
+			}
+			
+			footer {
+				background: #2C3E50;
+				color: white;
+				text-align: center;
+				padding: 60px 0;
+			}
+			
+			.footer-content {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 40px;
+				margin-bottom: 40px;
+			}
+			
+			.footer-section h4 {
+				font-family: 'Fredoka', sans-serif;
+				font-size: 1.5rem;
+				margin-bottom: 20px;
+				color: #4ECDC4;
+			}
+			
+			.footer-section p,
+			.footer-section a {
+				color: #BDC3C7;
+				text-decoration: none;
+				line-height: 1.6;
+			}
+			
+			.footer-section a:hover {
+				color: #4ECDC4;
+			}
+			
+			.decorative-wave {
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path fill="%234ECDC4" d="M0,60 Q250,20 500,60 T1000,60 V100 H0 V60Z"></path></svg>') repeat-x;
+				height: 100px;
+				background-size: 1000px 100px;
+			}
+			
+			@media (max-width: 768px) {
+				.nav-links {
+					display: none;
+				}
+				
+				.hero h2 {
+					font-size: 2.5rem;
+				}
+				
+				.hero p {
+					font-size: 1.2rem;
+				}
+				
+				.logo h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
+		
+		<header>
+			<nav class="container">
+				<div class="logo">
+					<span>🏝️</span>
+					<h1>Tiki Tykes</h1>
+				</div>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#play">Play</a></li>
+					<li><a href="#community">Community</a></li>
+					<li><a href="#membership">Membership</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main>
+			<section class="hero" id="home">
+				<div class="container">
+					<h2>🌺 Where Island Adventures Begin! 🌊</h2>
+					<p>Welcome to Tiki Tykes Island Play - Amelia Island's magical destination where young explorers discover, play, and connect in our safe, beach-inspired wonderland!</p>
+					<a href="#contact" class="cta-button">Start Your Island Adventure</a>
+				</div>
+			</section>
+			
+			<div class="decorative-wave"></div>
+			
+			<section class="features" id="play">
+				<div class="container">
+					<h2 class="section-title">🏖️ Island Play Experiences</h2>
+					<p class="section-subtitle">Discover our thoughtfully designed play areas that celebrate the beauty and wonder of Amelia Island</p>
+					
+					<div class="features-grid">
+						<div class="feature-card">
+							<div class="feature-icon">🏰</div>
+							<h3>Amelia Island Cityscape</h3>
+							<p>Explore our one-of-a-kind soft play area featuring a custom "All About Amelia Island" cityscape that brings the magic of our coastal community indoors!</p>
+						</div>
+						
+						<div class="feature-card">
+							<div class="feature-icon">🌴</div>
+							<h3>Climate-Controlled Comfort</h3>
+							<p>Enjoy year-round play in our perfectly climate-controlled environment - ideal for those hot summer days and cooler winter months!</p>
+						</div>
+						
+						<div class="feature-card">
+							<div class="feature-icon">👨‍👩‍👧‍👦</div>
+							<h3>Family Connection Hub</h3>
+							<p>More than just play - connect with other local families, share parenting experiences, and build lasting friendships in our welcoming community space.</p>
+						</div>
+						
+						<div class="feature-card">
+							<div class="feature-icon">🛡️</div>
+							<h3>Safe & Engaging</h3>
+							<p>Every element is designed with safety first while sparking imagination and creativity in our young island adventurers.</p>
+						</div>
+						
+						<div class="feature-card">
+							<div class="feature-icon">🎨</div>
+							<h3>Creative Exploration</h3>
+							<p>Watch your little ones' imaginations soar as they explore themed play areas designed to inspire wonder and creativity.</p>
+						</div>
+						
+						<div class="feature-card">
+							<div class="feature-icon">☕</div>
+							<h3>Parent-Friendly Amenities</h3>
+							<p>Relax and connect with other parents while enjoying locally-sourced coffee and snacks from our community partners.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="community" id="community">
+				<div class="container">
+					<h2 class="section-title">🤝 Our Amelia Island Community</h2>
+					<p class="section-subtitle">Building connections that matter - because parenting is better together</p>
+					
+					<div class="community-content">
+						<div class="community-item">
+							<h4>🌟 Tiki Testers Advisory Group</h4>
+							<p>Join our core group of 5-8 local families who help shape the Tiki Tykes experience with exclusive perks and early access to new features.</p>
+						</div>
+						
+						<div class="community-item">
+							<h4>💬 Parent Focus Groups</h4>
+							<p>Share your voice in our regular focus groups where we listen to your needs and continuously evolve to serve our community better.</p>
+						</div>
+						
+						<div class="community-item">
+							<h4>🤝 Local Partnerships</h4>
+							<p>Discover trusted local businesses and services through our curated network of community partners throughout Northeast Florida.</p>
+						</div>
+						
+						<div class="community-item">
+							<h4>🌊 Island Events</h4>
+							<p>Participate in special community events, seasonal celebrations, and family activities that bring our Amelia Island families together.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<div class="decorative-wave"></div>
+		</main>
+		
+		<footer id="contact">
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h4>🏝️ Visit Tiki Tykes</h4>
+						<p>Amelia Island, Florida<br>
+						Coming Soon!<br>
+						Stay tuned for our grand opening</p>
+					</div>
+					
+					<div class="footer-section">
+						<h4>📞 Get In Touch</h4>
+						<p>Ready to join our island community?<br>
+						<a href="mailto:hello@tikitykes.com">hello@tikitykes.com</a><br>
+						Follow our journey on social media</p>
+					</div>
+					
+					<div class="footer-section">
+						<h4>🎯 Our Mission</h4>
+						<p>Sparking imagination, connection, and joyful play through immersive, beach-inspired experiences that celebrate the unique spirit of Amelia Island.</p>
+					</div>
+				</div>
+				
+				<div style="border-top: 1px solid #34495E; padding-top: 30px; margin-top: 40px;">
+					<p>&copy; 2024 Tiki Tykes Island Play. Made with 💙 for Amelia Island families.</p>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

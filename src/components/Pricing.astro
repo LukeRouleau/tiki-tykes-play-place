@@ -1,0 +1,470 @@
+---
+// Pricing component for Tiki Tykes Play Place
+---
+
+<section id="pricing" class="pricing">
+	<div class="pricing-container">
+		<div class="pricing-header">
+			<h2>Choose Your Adventure</h2>
+			<p>Flexible pricing options to fit every family's needs</p>
+		</div>
+		
+		<div class="pricing-cards">
+			<div class="pricing-card">
+				<div class="card-header">
+					<h3>Drop-In Play</h3>
+					<p class="card-subtitle">Perfect for occasional visits</p>
+				</div>
+				<div class="card-price">
+					<span class="price">$15</span>
+					<span class="period">per child</span>
+				</div>
+				<ul class="features-list">
+					<li>All-day play access</li>
+					<li>All themed areas included</li>
+					<li>Toddlers under 2: $10</li>
+					<li>Parents play for free</li>
+					<li>No commitment required</li>
+				</ul>
+				<div class="card-footer">
+					<a href="/book-visit" class="btn btn-outline">Book Your Visit</a>
+				</div>
+			</div>
+			
+			<div class="pricing-card popular">
+				<div class="popular-badge">Most Popular</div>
+				<div class="card-header">
+					<h3>Monthly Membership</h3>
+					<p class="card-subtitle">Great value for regular families</p>
+				</div>
+				<div class="card-price">
+					<span class="price">$59</span>
+					<span class="period">per month</span>
+				</div>
+				<ul class="features-list">
+					<li>Unlimited play for 1 child</li>
+					<li>10% discount on parties</li>
+					<li>Free guest passes (2/month)</li>
+					<li>Early access to events</li>
+					<li>Member-only play hours</li>
+					<li>15% off retail & snacks</li>
+				</ul>
+				<div class="card-footer">
+					<a href="/membership" class="btn btn-primary">Start Membership</a>
+				</div>
+			</div>
+			
+			<div class="pricing-card premium">
+				<div class="card-header">
+					<h3>Family Membership</h3>
+					<p class="card-subtitle">Best value for multiple children</p>
+				</div>
+				<div class="card-price">
+					<span class="price">$99</span>
+					<span class="period">per month</span>
+				</div>
+				<ul class="features-list">
+					<li>Unlimited play for up to 3 children</li>
+					<li>20% discount on parties</li>
+					<li>Free guest passes (4/month)</li>
+					<li>Priority event booking</li>
+					<li>Free monthly class</li>
+					<li>20% off retail & snacks</li>
+					<li>VIP member events</li>
+				</ul>
+				<div class="card-footer">
+					<a href="/membership" class="btn btn-primary">Join Family Plan</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="additional-pricing">
+			<h3>Additional Services</h3>
+			<div class="services-pricing">
+				<div class="service-price">
+					<h4>🎂 Birthday Parties</h4>
+					<p>Starting at <strong>$349</strong></p>
+					<small>Includes 2-hour party room, decorations, setup, and party host</small>
+				</div>
+				<div class="service-price">
+					<h4>🎨 Classes & Programs</h4>
+					<p><strong>$20-40</strong> per session</p>
+					<small>Music, art, yoga, and sensory play classes</small>
+				</div>
+				<div class="service-price">
+					<h4>👶 Drop-Off Play</h4>
+					<p><strong>$25</strong> for 2 hours</p>
+					<small>Supervised play time (potty-trained children 2+)</small>
+				</div>
+				<div class="service-price">
+					<h4>🎪 Private Events</h4>
+					<p><strong>$200/hour</strong></p>
+					<small>Exclusive facility access for groups</small>
+				</div>
+			</div>
+		</div>
+		
+		<div class="pricing-notes">
+			<h4>Important Information</h4>
+			<div class="notes-grid">
+				<div class="note">
+					<strong>Socks Required:</strong> All children must wear non-slip socks in play areas. Available for purchase at front desk.
+				</div>
+				<div class="note">
+					<strong>Age Restrictions:</strong> Play areas designed for ages 0-5. Older siblings welcome but must stay with parents.
+				</div>
+				<div class="note">
+					<strong>Supervision:</strong> Parents/guardians must remain on premises and actively supervise children at all times.
+				</div>
+				<div class="note">
+					<strong>Capacity:</strong> We maintain comfortable capacity limits to ensure safety and enjoyment for all families.
+				</div>
+			</div>
+		</div>
+		
+		<div class="external-service-notice">
+			<h4>🔗 External Services Integration</h4>
+			<div class="service-integration">
+				<div class="integration-item">
+					<h5>Payment Processing</h5>
+					<p><strong>Recommended:</strong> Stripe or Square for secure payment processing</p>
+					<ul>
+						<li>Recurring billing for memberships</li>
+						<li>PCI compliance built-in</li>
+						<li>Multiple payment methods</li>
+					</ul>
+				</div>
+				<div class="integration-item">
+					<h5>Booking & Scheduling</h5>
+					<p><strong>Recommended:</strong> Acuity Scheduling or Calendly</p>
+					<ul>
+						<li>Online party booking</li>
+						<li>Class registration</li>
+						<li>Automated reminders</li>
+					</ul>
+				</div>
+				<div class="integration-item">
+					<h5>Membership Management</h5>
+					<p><strong>Recommended:</strong> MindBody or WellnessLiving</p>
+					<ul>
+						<li>Member check-ins</li>
+						<li>Usage tracking</li>
+						<li>Automated billing</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.pricing {
+		padding: 6rem 0;
+		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	}
+
+	.pricing-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.pricing-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.pricing-header h2 {
+		font-size: 2.5rem;
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.pricing-header p {
+		font-size: 1.2rem;
+		color: #666;
+	}
+
+	.pricing-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.pricing-card {
+		background: white;
+		border-radius: 20px;
+		padding: 2rem;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		position: relative;
+		transition: transform 0.3s ease;
+		border: 2px solid transparent;
+	}
+
+	.pricing-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.pricing-card.popular {
+		border-color: #4a90e2;
+		transform: scale(1.05);
+	}
+
+	.pricing-card.premium {
+		border-color: #ffd700;
+	}
+
+	.popular-badge {
+		position: absolute;
+		top: -10px;
+		right: 20px;
+		background: #4a90e2;
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: bold;
+	}
+
+	.card-header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.card-header h3 {
+		color: #2c3e50;
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.card-subtitle {
+		color: #666;
+		font-size: 0.9rem;
+	}
+
+	.card-price {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.price {
+		font-size: 3rem;
+		font-weight: bold;
+		color: #4a90e2;
+	}
+
+	.period {
+		color: #666;
+		font-size: 1rem;
+		margin-left: 0.5rem;
+	}
+
+	.features-list {
+		list-style: none;
+		margin-bottom: 2rem;
+	}
+
+	.features-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #f8f9fa;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.features-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: #4a90e2;
+		font-weight: bold;
+	}
+
+	.card-footer {
+		text-align: center;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: all 0.3s ease;
+		border: 2px solid #4a90e2;
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: #4a90e2;
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background: #357abd;
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: #4a90e2;
+	}
+
+	.btn-outline:hover {
+		background: #4a90e2;
+		color: white;
+	}
+
+	.additional-pricing {
+		background: white;
+		padding: 3rem;
+		border-radius: 20px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		margin-bottom: 3rem;
+	}
+
+	.additional-pricing h3 {
+		text-align: center;
+		color: #2c3e50;
+		margin-bottom: 2rem;
+		font-size: 1.8rem;
+	}
+
+	.services-pricing {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-price {
+		text-align: center;
+		padding: 1.5rem;
+		border: 1px solid #e9ecef;
+		border-radius: 15px;
+		background: #f8f9fa;
+	}
+
+	.service-price h4 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.service-price p {
+		color: #4a90e2;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.service-price small {
+		color: #666;
+		font-size: 0.9rem;
+	}
+
+	.pricing-notes {
+		background: #fff3cd;
+		padding: 2rem;
+		border-radius: 15px;
+		border: 1px solid #ffeaa7;
+		margin-bottom: 3rem;
+	}
+
+	.pricing-notes h4 {
+		color: #856404;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.notes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1rem;
+	}
+
+	.note {
+		color: #856404;
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.external-service-notice {
+		background: #e8f4f8;
+		padding: 2rem;
+		border-radius: 15px;
+		border: 1px solid #4a90e2;
+	}
+
+	.external-service-notice h4 {
+		color: #2c3e50;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.service-integration {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.integration-item {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border: 1px solid #4a90e2;
+	}
+
+	.integration-item h5 {
+		color: #2c3e50;
+		margin-bottom: 0.5rem;
+	}
+
+	.integration-item p {
+		color: #4a90e2;
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+
+	.integration-item ul {
+		list-style: none;
+		color: #666;
+		font-size: 0.8rem;
+	}
+
+	.integration-item li {
+		margin-bottom: 0.3rem;
+		padding-left: 1rem;
+		position: relative;
+	}
+
+	.integration-item li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: #4a90e2;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.pricing-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.pricing-card.popular {
+			transform: none;
+		}
+
+		.pricing-header h2 {
+			font-size: 2rem;
+		}
+
+		.services-pricing {
+			grid-template-columns: 1fr;
+		}
+
+		.notes-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.service-integration {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,429 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Member Portal - Tiki Tykes Play Place">
+	<section class="member-portal">
+		<div class="portal-container">
+			<div class="portal-header">
+				<h1>Member Portal</h1>
+				<p>Access your account, manage your membership, and stay connected</p>
+			</div>
+			
+			<div class="portal-content">
+				<div class="login-section">
+					<div class="service-integration-notice">
+						<h3>🔗 Member Portal Integration Required</h3>
+						<p><strong>Recommended Services:</strong></p>
+						<div class="integration-options">
+							<div class="integration-option">
+								<h4>Option 1: MindBody or WellnessLiving</h4>
+								<ul>
+									<li>Complete membership management system</li>
+									<li>Built-in member portal</li>
+									<li>Automated billing and payments</li>
+									<li>Usage tracking and analytics</li>
+									<li>Mobile app integration</li>
+								</ul>
+							</div>
+							<div class="integration-option">
+								<h4>Option 2: Custom Authentication</h4>
+								<ul>
+									<li>Auth0 or Firebase Authentication</li>
+									<li>Custom member database</li>
+									<li>Stripe for payment processing</li>
+									<li>Custom booking system</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="placeholder-login">
+						<h3>Member Login</h3>
+						<form class="login-form">
+							<div class="form-group">
+								<label for="email">Email Address</label>
+								<input type="email" id="email" name="email" required>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" id="password" name="password" required>
+							</div>
+							<button type="submit" class="login-btn" disabled>
+								🔧 Integration Required
+							</button>
+						</form>
+						<div class="login-links">
+							<a href="/forgot-password">Forgot Password?</a>
+							<a href="/register">New Member? Sign Up</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="features-preview">
+					<h3>Member Portal Features</h3>
+					<div class="features-grid">
+						<div class="feature-card">
+							<div class="feature-icon">👤</div>
+							<h4>Account Management</h4>
+							<p>Update contact information, payment methods, and emergency contacts</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon">📊</div>
+							<h4>Usage Tracking</h4>
+							<p>View visit history, remaining guest passes, and membership benefits</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon">🎟️</div>
+							<h4>Event Booking</h4>
+							<p>Reserve spots for classes, events, and special member activities</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon">💳</div>
+							<h4>Billing & Payments</h4>
+							<p>View invoices, update payment methods, and manage subscription</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon">🎂</div>
+							<h4>Party Booking</h4>
+							<p>Schedule birthday parties with member discounts and priority booking</p>
+						</div>
+						<div class="feature-card">
+							<div class="feature-icon">📱</div>
+							<h4>Mobile Access</h4>
+							<p>Access your account on-the-go with mobile-friendly interface</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="membership-benefits">
+				<h3>Current Membership Benefits</h3>
+				<div class="benefits-comparison">
+					<div class="benefit-tier">
+						<h4>Monthly Membership - $59</h4>
+						<ul>
+							<li>✓ Unlimited play for 1 child</li>
+							<li>✓ 2 guest passes per month</li>
+							<li>✓ 10% off birthday parties</li>
+							<li>✓ 15% off retail & snacks</li>
+							<li>✓ Early access to events</li>
+						</ul>
+					</div>
+					<div class="benefit-tier premium">
+						<h4>Family Membership - $99</h4>
+						<ul>
+							<li>✓ Unlimited play for up to 3 children</li>
+							<li>✓ 4 guest passes per month</li>
+							<li>✓ 20% off birthday parties</li>
+							<li>✓ 20% off retail & snacks</li>
+							<li>✓ Priority event booking</li>
+							<li>✓ Free monthly class</li>
+							<li>✓ VIP member events</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="upgrade-notice">
+					<h4>Want to upgrade your membership?</h4>
+					<p>Contact us at <a href="mailto:info@tikitykes.com">info@tikitykes.com</a> or call (904) 555-PLAY</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.member-portal {
+		padding: 6rem 0;
+		background: #f8f9fa;
+		min-height: 100vh;
+	}
+
+	.portal-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.portal-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.portal-header h1 {
+		font-size: 2.5rem;
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.portal-header p {
+		font-size: 1.2rem;
+		color: #666;
+	}
+
+	.portal-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.service-integration-notice {
+		background: #e8f4f8;
+		padding: 2rem;
+		border-radius: 15px;
+		border: 1px solid #4a90e2;
+		margin-bottom: 2rem;
+	}
+
+	.service-integration-notice h3 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.service-integration-notice p {
+		color: #4a90e2;
+		margin-bottom: 1.5rem;
+		font-weight: bold;
+	}
+
+	.integration-options {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.integration-option {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border: 1px solid #4a90e2;
+	}
+
+	.integration-option h4 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.integration-option ul {
+		list-style: none;
+		color: #666;
+	}
+
+	.integration-option li {
+		margin-bottom: 0.5rem;
+		padding-left: 1rem;
+		position: relative;
+	}
+
+	.integration-option li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: #4a90e2;
+	}
+
+	.placeholder-login {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	}
+
+	.placeholder-login h3 {
+		color: #2c3e50;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 0.5rem;
+		color: #2c3e50;
+		font-weight: bold;
+	}
+
+	.form-group input {
+		width: 100%;
+		padding: 0.8rem;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		font-size: 1rem;
+	}
+
+	.login-btn {
+		width: 100%;
+		background: #6c757d;
+		color: white;
+		padding: 1rem;
+		border: none;
+		border-radius: 5px;
+		font-size: 1rem;
+		font-weight: bold;
+		cursor: not-allowed;
+		opacity: 0.6;
+		margin-bottom: 1rem;
+	}
+
+	.login-links {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.login-links a {
+		color: #4a90e2;
+		text-decoration: none;
+		font-size: 0.9rem;
+	}
+
+	.login-links a:hover {
+		text-decoration: underline;
+	}
+
+	.features-preview h3 {
+		color: #2c3e50;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.feature-card {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 10px;
+		text-align: center;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.feature-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.feature-icon {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.feature-card h4 {
+		color: #2c3e50;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.feature-card p {
+		color: #666;
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.membership-benefits {
+		background: white;
+		padding: 3rem;
+		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	}
+
+	.membership-benefits h3 {
+		color: #2c3e50;
+		margin-bottom: 2rem;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+
+	.benefits-comparison {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.benefit-tier {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 15px;
+		border: 2px solid #e9ecef;
+	}
+
+	.benefit-tier.premium {
+		border-color: #ffd700;
+		background: #fffbf0;
+	}
+
+	.benefit-tier h4 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.benefit-tier ul {
+		list-style: none;
+	}
+
+	.benefit-tier li {
+		margin-bottom: 0.5rem;
+		color: #555;
+	}
+
+	.upgrade-notice {
+		background: #e8f4f8;
+		padding: 2rem;
+		border-radius: 15px;
+		text-align: center;
+		border: 1px solid #4a90e2;
+	}
+
+	.upgrade-notice h4 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.upgrade-notice p {
+		color: #666;
+	}
+
+	.upgrade-notice a {
+		color: #4a90e2;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.upgrade-notice a:hover {
+		text-decoration: underline;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.portal-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.portal-header h1 {
+			font-size: 2rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.benefits-comparison {
+			grid-template-columns: 1fr;
+		}
+
+		.integration-options {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
